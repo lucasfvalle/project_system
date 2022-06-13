@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --blue: #0B121C;
+  --red: #be2725;
+  --white: #eef1f7;
+}
+.App{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  flex-direction: column;
+}
