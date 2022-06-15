@@ -1,0 +1,39 @@
+.card{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 0.9em;
+    align-items: center;
+    padding: 1em;
+}
+.card:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card i{
+    font-size: 7em;
+    color: var(--blue);
+}
+.card h2{
+    font-size: 2em;
+    color: var(--blue);
+}
+.card p{
+    width: 100%;
+    height: 100px;
+    padding: 1em 1em;
+    text-align: center;
+}
+.card button{
+    width: 50%;
+    height: 75px;
+    border: 1px solid var(--blue);
+    border-radius: 10px;
+    font-size: 1.4em;
+}
+.card button:hover{
+    background-color: var(--blue);
+    color: #eef1f7;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
