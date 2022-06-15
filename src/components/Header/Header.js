@@ -7,11 +7,14 @@ function Header(){
         <header>
             <div className="header-container">
                 <div className="logo">
-                    Logo
+                    Project System
                 </div>
                 <nav>
                     <Link to="/">Home</Link>
+                    <Link to="/register"> Cadastro</Link>
+                    <Link to="/dashboard"> Dashboard</Link>
                     <Link to="/about">About</Link>
+                    
                 </nav>
             </div>
         </header>
