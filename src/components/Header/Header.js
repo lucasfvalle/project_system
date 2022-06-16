@@ -1,8 +1,12 @@
 import React from "react";
 import './Header.css';
 import { Link } from "react-router-dom";
+import {useAuthValue} from '../../context/AuthContext';
+import {useAuthentication} from '../../hooks/useAuthentication';
 
 function Header(){
+    const {user} = useAuthValue();
+
     return(
         <header>
             <div className="header-container">
@@ -11,8 +15,12 @@ function Header(){
                 </div>
                 <nav>
                     <Link to="/">Home</Link>
-                    <Link to="/register"> Cadastro</Link>
-                    <Link to="/dashboard"> Dashboard</Link>
+                    {!user &&(
+                        <Link to="/register"> Cadastro</Link>
+                    )}
+                    {user && (
+                        <Link to="/dashboard"> Dashboard</Link>
+                    )}
                     <Link to="/about">About</Link>
                     
                 </nav>

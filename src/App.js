@@ -14,27 +14,41 @@ import {AuthProvider} from "./context/AuthContext.js";
 import Header from './components/Header/Header';
 
 // Config router
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+
+// Auth
 import {onAuthStateChanged} from 'firebase/auth';
 
 // Hooks
 import { useState, useEffect } from 'react';
-import  { userAuthentication} from './hooks/userAuthentication';
+import  { useAuthentication} from './hooks/useAuthentication';
 
 function App() {
   const [user, setUser] = useState(undefined);
-  const {auth} = userAuthentication();
+  const {auth} = useAuthentication();
+
+  const loadingUser = user === undefined;
+
+  useEffect(() =>{
+    onAuthStateChanged(auth, (user) =>{
+      setUser(user);
+    })
+  }, [auth])
+
+  if(loadingUser){
+    return <p>Carregando...</p>
+  }
 
   return (
     <div className="App">
-     <AuthProvider>
+     <AuthProvider value={{user}}>
         <BrowserRouter>
           <Header />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/register" element={<Register />} />
+              <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
               <Route path="/about" element={<About />} />
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard" element={!user ? <Navigate to="/" /> : <Dashboard />} />
             </Routes>
         </BrowserRouter>
      </AuthProvider>

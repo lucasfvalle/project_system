@@ -3,7 +3,7 @@ import './Register.css';
 
 // Hooks
 import {useEffect, useState} from 'react';
-import { userAuthentication } from "../../hooks/userAuthentication";
+import { useAuthentication } from "../../hooks/useAuthentication";
 
 function Register(){
     const [displayName,setDisplayName] = useState("");
@@ -12,7 +12,7 @@ function Register(){
     const [confirmPassword, setConfirmPassword] = useState(""); 
     const [error, setError] = useState("")
 
-    const {createUser, error: authError, loading} = userAuthentication();
+    const {createUser, error: authError, loading} = useAuthentication();
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
