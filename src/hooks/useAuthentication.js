@@ -57,6 +57,38 @@ export const useAuthentication = () => {
 
         setLoading(false)
     };
+    const login = async(data) => {
+        checkIfIsCancelled();
+        setLoading(true)
+        setError(null);
+
+        try {
+            const {user} = await signInWithEmailAndPassword (
+                auth,
+                data.email,
+                data.password
+            )
+            setLoading(false)
+            return user;
+        } catch (error) {
+            console.log(error.message);
+            console.log(typeof error.message);
+
+            let systemErrorMessage
+            if(error.message.includes("Password")){
+                systemErrorMessage = "A senha precisa ter no mínimo 6 caracteres."
+            }else if(error.message.includes("email-already")){
+                systemErrorMessage = "E-mail já cadastrado.";
+            }else{
+                systemErrorMessage = "Ocorreu um erro, por favor, tente mais tarde!";
+            }
+            
+            setError(systemErrorMessage);
+            setLoading(false);
+        }
+
+        setLoading(false)
+    };
     
     //Logout
     const logout = () =>{
@@ -74,6 +106,7 @@ export const useAuthentication = () => {
         error,
         loading,
         logout,
+        login,
     }
 
 

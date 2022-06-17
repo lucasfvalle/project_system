@@ -25,6 +25,9 @@ function Header(){
                     {user &&(
                         <button onClick={logout}>Sair</button>
                     )}
+                    {!user && (
+                        <Link to="/login"> Login </Link>
+                    )}
                     <Link to="/about">About</Link>
                     
                 </nav>
