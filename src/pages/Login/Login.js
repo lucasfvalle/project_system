@@ -32,7 +32,7 @@ function Login(){
         if(authError){
             setError(authError);
         }
-    })
+    }, [authError])
 
 
     return(
