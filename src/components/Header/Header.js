@@ -6,7 +6,7 @@ import {useAuthentication} from '../../hooks/useAuthentication';
 
 function Header(){
     const {user} = useAuthValue();
-    const {logout} = useAuthentication();
+    const {auth, logout} = useAuthentication();
 
     return(
         <header>
@@ -22,15 +22,20 @@ function Header(){
                     {user && (
                         <Link to="/dashboard"> Dashboard</Link>
                     )}
-                    {user &&(
-                        <button onClick={logout}>Sair</button>
-                    )}
                     {!user && (
                         <Link to="/login"> Login </Link>
                     )}
                     <Link to="/about">About</Link>
-                    
+                    {user &&(
+                        <a onClick={logout}>Sair</a>
+                    )}
                 </nav>
+                {user && (
+                    <div className="user">
+                        <Link to="/profile"><i className="bi bi-person-circle"></i>{auth.currentUser.displayName}</Link>
+                    </div>
+                )}
+                
             </div>
         </header>
     )

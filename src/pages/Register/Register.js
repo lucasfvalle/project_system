@@ -43,7 +43,11 @@ function Register(){
 
 
     return(
-        <div className="register">
+        <div className="register-container">
+            <div className="register-image">
+                <img src="../../../imgs/account.png" alt="Crie sua conta."/>
+            </div>
+            <div className="register">
             <div className="register-title">
                 <h1>Cadastro</h1>
                 <p>
@@ -96,10 +100,12 @@ function Register(){
                     />
                 </label>
                 {!loading && <button className="btn">Cadastrar</button>}
-                {loading && <button className="btn" disable>Aguarde...</button>}
+                {loading && <button className="btn" disable="true"><div className="loader"></div></button>}
                 {error && <p className="error">{error}</p>}
             </form>
         </div>
+        </div>
+        
     )
 }
 export default Register

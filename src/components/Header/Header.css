@@ -42,3 +42,17 @@ header .header-container nav a{
 header .header-container nav a:hover{
     text-decoration: underline;
 }
+a{
+    cursor: pointer;
+}
+.user > a{
+    color: #eef1f7;
+    text-decoration: none;
+}
+.user > a:hover{
+    text-decoration: underline;
+}
+.user a > i{
+    text-decoration: none;
+    padding-right: 5px;
+}

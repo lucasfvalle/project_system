@@ -36,42 +36,48 @@ function Login(){
 
 
     return(
-        <div className="register">
-            <div className="register-title">
-                <h1>Cadastro</h1>
-                <p>
-                    Cadastre-se para ter acesso ao sistema.
-                </p>
+        <div className="login-container">
+            <div className="login-image">
+                <img src="../../../imgs/login.png" />
             </div>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    <span>Email:</span>
-                    <input 
-                        type="email"
-                        name="email"
-                        required
-                        placeholder="Insira o seu e-mail."
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                </label>
-                <label>
-                    <span>Senha:</span>
-                    <input 
-                        type="password"
-                        name="password"
-                        required
-                        placeholder="Insira a sua senha."
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </label>
-                
-                {!loading && <button className="btn">Cadastrar</button>}
-                {loading && <button className="btn" disable>Aguarde...</button>}
-                {error && <p className="error">{error}</p>}
-            </form>
+            <div className="login">
+                <div className="login-title">
+                    <h1>Login</h1>
+                    <p>
+                        Insira seu e-mail e sua senha para acessar o sistema.
+                    </p>
+                </div>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        <span>Email:</span>
+                        <input 
+                            type="email"
+                            name="email"
+                            required
+                            placeholder="Insira o seu e-mail."
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </label>
+                    <label>
+                        <span>Senha:</span>
+                        <input 
+                            type="password"
+                            name="password"
+                            required
+                            placeholder="Insira a sua senha."
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </label>
+                    
+                    {!loading && <button className="btn">Entrar</button>}
+                    {loading && <button className="btn" disable="true"><div className="loader"></div></button>}
+                    {error && <p className="error">{error}</p>}
+                </form>
+            </div>
         </div>
+        
     )
 }
 export default Login

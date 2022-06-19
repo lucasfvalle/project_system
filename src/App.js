@@ -8,6 +8,9 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 
+// Funcionalidades
+import Profile from './Profile/Profile';
+
 // Context
 import {AuthProvider} from "./context/AuthContext.js";
 
@@ -51,6 +54,7 @@ function App() {
               <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
               <Route path="/about" element={<About />} />
               <Route path="/dashboard" element={!user ? <Navigate to="/" /> : <Dashboard />} />
+              <Route path="/profile" element={user ? <Profile /> : <Navigate to="/" />} />
             </Routes>
         </BrowserRouter>
      </AuthProvider>

@@ -1,0 +1,78 @@
+.login-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+.login-container .login-image{
+    width: 50vw;
+    text-align: right;
+}
+.login-container .login-image img{
+    width: 78%;
+}
+.login{
+    width: 50vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.login .login-title{
+    width: 100%;
+    text-align: center;
+    margin: 1em 0 2em 0;
+}
+.login .login-title h2{
+    font-size: 2.5em;
+    color: var(--blue);
+}
+.login .login-title p{
+    width: 100%;
+    text-align: center;
+}
+.login form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login form label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+.login form label > span{
+    margin-bottom: .5em;
+}
+.login form label > input{
+    width: 350px;
+    height: 40px;
+    padding: 1em;
+    border-radius: 5px;
+    border-style: none;
+    border: 1px solid #ccc;
+}
+.login form label > input:focus{
+    border: none;
+}
+.login form > button{
+    width: 350px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 1.2em;
+}
+.login form > button:hover{
+    background-color: rgb(1, 107, 1);
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}

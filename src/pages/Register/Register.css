@@ -11,7 +11,7 @@
     text-align: right;
 }
 .register-container .register-image img{
-    width: 80%;
+    width: 78%;
 }
 .register{
     width: 50vw;
@@ -62,6 +62,9 @@
     width: 350px;
     height: 60px;
     background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     border-radius: 10px;
     color: var(--white);
@@ -72,3 +75,4 @@
     transition: ease-in-out 0.5s;
     cursor: pointer;
 }
+
