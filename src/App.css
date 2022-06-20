@@ -2,6 +2,7 @@
 *{
   margin: 0;
   box-sizing: border-box;
+  
 }
 :root{
   --blue: #0B121C;
@@ -10,13 +11,14 @@
 }
 body{
   font-family: 'Roboto', sans-serif;
+  
 }
 .App{
-  display: flex;
   width: 100vw;
   height: 100vh;
   background-color: var(--white);
-  flex-direction: column;
+  overflow-x: hidden;
+  
 }
 /* Loading animation */
 .loader{

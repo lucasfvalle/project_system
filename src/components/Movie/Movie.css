@@ -1,0 +1,41 @@
+.movie{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1em;
+    column-gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+.movie:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.movie p{
+    line-height: 1.5;
+}
+.movie .movie-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1em;
+}
+.movie .movie-content h2{
+    font-size: 2em;
+    color: #303030;
+}
+.movie .movie-content button{
+    height: 60px;
+    width: auto;
+    background-color: var(--red);
+    border:none;
+    font-size: 1em;
+    color: var(--white);
+    border-radius: 10px;
+}
+.movie .movie-content button:hover{
+    background-color: #ad2522;
+    transition: all ease-in-out .5s;
+    cursor: pointer;
+}

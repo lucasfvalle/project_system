@@ -1,8 +1,19 @@
 .home{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #eef1f7;
+    overflow: auto;
+    flex-direction: column;
+}
+.home .card-movie-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    column-gap: 2em;
+    row-gap: 2em;
 }
