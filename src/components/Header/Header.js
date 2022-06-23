@@ -22,6 +22,9 @@ function Header(){
                     {user && (
                         <Link to="/dashboard"> Dashboard</Link>
                     )}
+                    {user && (
+                        <Link to="/createpost"> Criar post</Link>
+                    )}
                     {!user && (
                         <Link to="/login"> Login </Link>
                     )}

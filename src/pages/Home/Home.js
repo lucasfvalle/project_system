@@ -29,10 +29,7 @@ function Home(){
       <div className="genres">
         <p> nada </p>
       </div>
-        
-          
-        
-    
+      
       <div className="card-movie-container">
         {movies.map(movie =>{
           console.log("id" + movie.id);
