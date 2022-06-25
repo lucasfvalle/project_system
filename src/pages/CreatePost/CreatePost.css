@@ -1,0 +1,57 @@
+.create-post{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.create-post h2{
+    width: 100%;
+    text-align: center;
+    margin: 1em 0 .5em 0;
+    color: #303030;
+    font-size: 2em;
+}
+.create-post p{
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    color: #303030;
+    margin-bottom: 1em;
+}
+.create-post form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.create-post form label{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+.create-post form label input, textarea{
+    width:350px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #303030;
+    background-color: #dcdee3;
+    padding: 10px;
+}
+.create-post form label textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .9em;
+    height: 200px;
+}
+.create-post form label input{
+    height: 35px;
+}
+.create-post form button{
+    width: 350px;
+    height: 35px;
+    margin-bottom: 1em;
+    border:none;
+    color: #eef1f7;
+    background-color: green;
+}

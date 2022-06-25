@@ -12,9 +12,9 @@ const CreatePost = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-    }
+    };
     return(
-        <div>
+        <div className="create-post">
             <h2> Criar post</h2>
             <p>
                 Escreva sobre o que quiser!
